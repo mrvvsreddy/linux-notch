@@ -1,0 +1,14 @@
+{
+  "name": "lnotch",
+  "description": "macOS-inspired dynamic notch with tasks, focus timer, notepad, and calendar events.",
+  "uuid": "lnotch@mrvvsreddy.dev",
+  "shell-version": [
+    "48",
+    "49",
+    "50",
+    "51"
+  ],
+  "url": "https://github.com/mrvvsreddy/lnotch",
+  "version": 1,
+  "version-name": "1.0.0"
+}

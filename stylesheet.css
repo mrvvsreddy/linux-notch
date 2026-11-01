@@ -1,0 +1,728 @@
+/* ==========================================================================
+   NotchOwl GNOME Shell Extension Stylesheet
+   ========================================================================== */
+
+/* Top bar panel button reset: strip GNOME default backgrounds & padding */
+.notch-panel-button {
+    padding: 0 4px !important;
+    background-color: transparent !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.notch-panel-button:hover,
+.notch-panel-button:active,
+.notch-panel-button:focus,
+.notch-panel-button:checked {
+    background-color: transparent !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Clean, Sleek Pill Notch in Top Bar (No icon, MacBook Dynamic Island aesthetic) */
+.notch-shell-pill {
+    height: 22px;
+    min-width: 48px;
+    border-radius: 9999px;
+    background-color: #0b0c12;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    margin: 4px 2px;
+    padding: 0 10px;
+    transition-duration: 200ms;
+}
+
+.notch-shell-pill:hover {
+    background-color: #161822;
+    border-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 8px rgba(124, 108, 240, 0.35);
+}
+
+.notch-pill-dot {
+    width: 18px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+.notch-shell-pill:hover .notch-pill-dot {
+    background-color: #ffffff;
+}
+
+.notch-shell-pill.has-timer {
+    min-width: 80px;
+    padding: 0 10px;
+}
+
+.notch-shell-pill.running {
+    border-color: #7c6cf0;
+    box-shadow: 0 0 10px rgba(124, 108, 240, 0.5);
+}
+
+/* Modal Overlay & Backdrop */
+.notch-panel-wrapper {
+    background-color: transparent;
+}
+
+.notch-panel-backdrop {
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+/* The Main Notch Card */
+.notch-main-panel {
+    background-color: #0c0e17;
+    border-radius: 28px;
+    padding: 14px 16px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+}
+
+/* Header */
+.notch-head {
+    spacing: 12px;
+    margin-bottom: 12px;
+}
+
+.notch-app-name {
+    font-size: 19px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.2px;
+}
+
+.notch-icon-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    transition-duration: 150ms;
+}
+
+.notch-icon-btn:hover {
+    background-color: rgba(255, 255, 255, 0.22);
+}
+
+.notch-close-btn {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.notch-close-btn:hover {
+    background-color: rgba(255, 60, 60, 0.7);
+}
+
+/* Segmented Control: [ Workspace | Insights | Customize ] */
+.notch-seg {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 3px;
+    spacing: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.notch-seg-btn {
+    border-radius: 16px;
+    padding: 5px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.65);
+    transition-duration: 200ms;
+}
+
+.notch-seg-btn.on {
+    background-color: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+}
+
+.notch-seg-btn:hover {
+    color: #ffffff;
+}
+
+/* Body & Cards Container */
+.notch-body {
+    spacing: 10px;
+}
+
+.notch-cards-container {
+    spacing: 12px;
+}
+
+/* Base Card */
+.card {
+    border-radius: 26px;
+    padding: 14px 16px 16px;
+    color: #1a1d1a;
+    min-width: 260px;
+}
+
+.c-green  { background-color: #8eb392; }
+.c-purple { background-color: #9e93c6; }
+.c-olive  { background-color: #a8a95e; }
+.c-blue   { background-color: #829db2; }
+
+/* Dynamic Island Notch Bar atop each card */
+.card-notch-bar {
+    width: 34px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.22);
+    margin: 0 auto 10px auto;
+}
+
+.card-head {
+    spacing: 8px;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1a1d1a;
+}
+
+.card-scroll {
+    min-height: 120px;
+}
+
+.card-mini-btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 13px;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.card-mini-btn:hover {
+    background-color: rgba(0, 0, 0, 0.16);
+}
+
+/* ---------------- Tasks Card ---------------- */
+.tasks-date-pill {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 2px 6px;
+    spacing: 4px;
+}
+
+.tasks-date-txt {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1a1d1a;
+}
+
+.tabs-pill {
+    background-color: rgba(0, 0, 0, 0.07);
+    border-radius: 12px;
+    padding: 3px;
+    spacing: 4px;
+    margin-bottom: 8px;
+}
+
+.tab-btn {
+    padding: 5px 12px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(26, 29, 26, 0.65);
+}
+
+.tab-btn.on {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: #1a1d1a;
+}
+
+.tasks-list {
+    spacing: 2px;
+}
+
+.task-item {
+    spacing: 10px;
+    padding: 8px 2px;
+    border-bottom: 1px dotted rgba(26, 29, 26, 0.22);
+}
+
+.task-item.done {
+    opacity: 0.55;
+}
+
+.task-main {
+    spacing: 3px;
+}
+
+.task-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1d1a;
+}
+
+.task-title.done {
+    color: rgba(26, 29, 26, 0.5);
+}
+
+/* True Circular Checkbox */
+.chk-circle {
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    min-height: 20px !important;
+    max-width: 20px !important;
+    max-height: 20px !important;
+    border-radius: 9999px !important;
+    border: 2px solid rgba(26, 29, 26, 0.55) !important;
+    background-color: transparent !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    transition-duration: 150ms;
+}
+
+.chk-circle:hover {
+    border-color: rgba(26, 29, 26, 0.85) !important;
+    background-color: rgba(26, 29, 26, 0.08) !important;
+}
+
+.chk-circle.on {
+    background-color: #1a1d1a !important;
+    border-color: #1a1d1a !important;
+}
+
+.chk-circle.on:hover {
+    background-color: #333833 !important;
+    border-color: #333833 !important;
+}
+
+.task-meta {
+    spacing: 6px;
+}
+
+.task-meta-txt {
+    font-size: 11.5px;
+    color: rgba(26, 29, 26, 0.7);
+    font-weight: 500;
+}
+
+.task-chip {
+    font-size: 11px;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.08);
+    padding: 2px 6px;
+    border-radius: 6px;
+    spacing: 4px;
+}
+
+.task-actions {
+    spacing: 2px;
+}
+
+.task-action-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.task-action-btn.sm {
+    width: 18px;
+    height: 18px;
+}
+
+.task-action-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.empty-notice {
+    font-size: 13.5px;
+    color: rgba(26, 29, 26, 0.6);
+    padding: 16px 4px;
+}
+
+.tasks-foot-bar {
+    background-color: rgba(255, 255, 255, 0.28);
+    border-radius: 16px;
+    padding: 6px 10px;
+    spacing: 8px;
+    margin-top: 10px;
+}
+
+.tasks-reorder-hint {
+    font-size: 11px;
+    color: rgba(26, 29, 26, 0.55);
+    font-weight: 500;
+}
+
+.add-input {
+    background-color: transparent;
+    border: none;
+    color: #1a1d1a;
+    font-size: 13.5px;
+}
+
+.add-input.sm {
+    font-size: 12px;
+    padding: 3px 6px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+}
+
+/* ---------------- Focus Timer Card ---------------- */
+.card-timer {
+    align-items: center;
+}
+
+.timer-dotmatrix {
+    margin: 12px auto 6px;
+}
+
+.timer-status {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(26, 29, 26, 0.65);
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.pbar-track {
+    height: 4px;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.12);
+    margin: 6px 12px 14px;
+    x-expand: true;
+}
+
+.pbar-fill {
+    height: 4px;
+    border-radius: 2px;
+    background-color: #1a1d1a;
+    width: 4%;
+}
+
+.timer-controls {
+    spacing: 12px;
+    margin-bottom: 12px;
+}
+
+.timer-btn-primary {
+    height: 42px;
+    border-radius: 21px;
+    background-color: rgba(40, 30, 70, 0.35);
+    color: #ffffff;
+    padding: 0 20px;
+    font-weight: 600;
+}
+
+.timer-btn-primary:hover {
+    background-color: rgba(40, 30, 70, 0.5);
+}
+
+.timer-btn-content {
+    spacing: 8px;
+}
+
+.timer-btn-finish {
+    width: 42px;
+    height: 42px;
+    border-radius: 21px;
+    background-color: rgba(40, 30, 70, 0.35);
+}
+
+.timer-btn-finish:hover {
+    background-color: rgba(40, 30, 70, 0.5);
+}
+
+.timer-presets {
+    spacing: 6px;
+}
+
+.preset-btn {
+    padding: 4px 10px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.08);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.preset-btn:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* ---------------- Notepad Card ---------------- */
+.notepad-date-box {
+    margin-bottom: 8px;
+}
+
+.notepad-date {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(26, 29, 26, 0.65);
+    margin-bottom: 6px;
+}
+
+.notepad-date-divider {
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 4px;
+}
+
+.notepad-box {
+    background-color: transparent;
+    padding: 0;
+}
+
+.notepad-entry {
+    background-color: transparent;
+    border: none;
+    color: #1a1d1a;
+    font-size: 14.5px;
+    line-height: 1.45;
+}
+
+.notepad-foot {
+    spacing: 8px;
+    margin-top: 12px;
+}
+
+.notepad-words {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(26, 29, 26, 0.65);
+}
+
+/* ---------------- Calendar Events Card ---------------- */
+.ev-subhead-row {
+    margin-bottom: 8px;
+    spacing: 8px;
+}
+
+.ev-today-lbl {
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(26, 29, 26, 0.55);
+    letter-spacing: 0.8px;
+}
+
+.ev-day-lbl {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(26, 29, 26, 0.7);
+}
+
+.events-list {
+    spacing: 7px;
+}
+
+.ev-item {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    padding: 10px 12px;
+    spacing: 10px;
+    transition-duration: 150ms;
+}
+
+.ev-item.done {
+    opacity: 0.5;
+}
+
+.ev-info-box {
+    spacing: 2px;
+}
+
+.ev-title {
+    font-size: 14px;
+    font-weight: 650;
+    color: #1a1d1a;
+}
+
+.ev-time {
+    font-size: 12px;
+    color: rgba(26, 29, 26, 0.65);
+}
+
+.ev-foot {
+    margin-top: 12px;
+    spacing: 8px;
+}
+
+.ev-conn-box {
+    spacing: 6px;
+}
+
+.ev-conn-txt {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(26, 29, 26, 0.65);
+}
+
+.ev-add-form {
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 12px;
+    padding: 8px;
+    spacing: 6px;
+    margin-bottom: 8px;
+}
+
+.ev-times-row {
+    spacing: 6px;
+}
+
+.ev-form-actions {
+    spacing: 6px;
+    justify-content: flex-end;
+}
+
+.btn-primary-sm {
+    background-color: #1a1d1a;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.btn-ghost-sm {
+    background-color: rgba(0, 0, 0, 0.08);
+    color: #1a1d1a;
+    border-radius: 12px;
+    padding: 4px 10px;
+    font-size: 12px;
+}
+
+/* ---------------- Insights View ---------------- */
+.card-insights {
+    spacing: 12px;
+}
+
+.stats-row {
+    spacing: 8px;
+}
+
+.stat-box {
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 14px;
+    padding: 12px 8px;
+    text-align: center;
+}
+
+.stat-num {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a1d1a;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: rgba(26, 29, 26, 0.65);
+}
+
+.insights-meta {
+    font-size: 13px;
+    color: rgba(26, 29, 26, 0.65);
+    margin-top: 8px;
+}
+
+/* ---------------- Customize View ---------------- */
+.card-customize {
+    spacing: 8px;
+}
+
+.settings-row {
+    spacing: 10px;
+    padding: 6px 0;
+}
+
+.row-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1d1a;
+}
+
+.subhead-label {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: rgba(26, 29, 26, 0.65);
+    margin: 8px 0 2px;
+}
+
+.btn-pill-sm {
+    background-color: rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    padding: 5px 12px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #1a1d1a;
+}
+
+.stepper-box {
+    background-color: rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    spacing: 4px;
+}
+
+.stepper-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.stepper-val {
+    min-width: 55px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.switch-btn {
+    width: 44px;
+    height: 26px;
+    border-radius: 13px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 2px;
+    transition-duration: 200ms;
+}
+
+.switch-btn.on {
+    background-color: #1a1d1a;
+}
+
+.switch-knob {
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.swatches-box {
+    spacing: 6px;
+}
+
+.swatch {
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    border: 2px solid transparent;
+}
+
+.swatch.on {
+    border-color: #ffffff;
+    box-shadow: 0 0 0 2px #1a1d1a;
+}
+
+/* Toast Message */
+.notch-toast {
+    background-color: rgba(20, 20, 24, 0.95);
+    color: #ffffff;
+    border-radius: 18px;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
